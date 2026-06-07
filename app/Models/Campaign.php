@@ -10,7 +10,7 @@ class Campaign extends Model
         "subject",
         "email_body",
         "phishing_link",
-        "_token"
+        
         
     ];
 }

