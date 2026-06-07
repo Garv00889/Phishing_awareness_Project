@@ -7,9 +7,9 @@ use App\Models\PhishingLogs;
 class DashboardController extends Controller
 {
     public function index()
-{
-    return view('phishing.dashboard', [
-        'logs' => PhishingLogs::latest()->get()
-    ]);
-}
+    {
+        return view('phishing.dashboard', [
+            'logs' => PhishingLogs::latest()->get(),
+        ]);
+    }
 }
